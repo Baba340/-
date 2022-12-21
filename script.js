@@ -3,10 +3,10 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 //canvasサイズ設定
-let canvasWidth = document.getElementById("canvas").width = window.innerWidth,
-    canvasHeight = document.getElementById("canvas").height = window.innerHeight;
+let canvasWidth = window.innerWidth,
+    canvasHeight = window.innerHeight;
 ctx.fillStyle = "black";
-ctx.fillRect(0,0,canvasWidth,canvasHeight);
+ctx.fillRect(0,0,canvas.clientWidth,canvas.clientHeight);
 
 //画面遷移
 document.addEventListener("keydown", (e) => {
@@ -17,9 +17,9 @@ document.addEventListener("keydown", (e) => {
 });
 
 //六光星枠線描画
-let oX = canvasWidth/2,
-    oY = canvasHeight/3;
-    r = 50,
+let oX = canvasWidth,
+    oY = canvasHeight;
+    r = 140,
     rT = r/2,
     TrT = (3*r)/2,
     rTr = Math.sqrt(3)*r,
@@ -82,8 +82,8 @@ function line(){
     ctx.lineTo(oX,oY-199);
     ctx.lineTo(oX,oY-200);*/
     ctx.fillStyle = "blue";
-    for(let i=0; i<300; i+=2){
-        ctx.fillRect(oX+dx+i,oY-200+dy+i,1,1);
+    for(let i=0; i<600; i+=2){
+        ctx.fillRect(oX+dx+i,oY-400+dy+i,1,1);
     }
     dx -= 2;
     dy += 2;
@@ -94,9 +94,9 @@ function lineS(){
     ctx.lineTo(oX+1,oY-199);
     ctx.lineTo(oX,oY-199);
     ctx.lineTo(oX,oY-200);*/
-    ctx.fillStyle = "black";
-    for(let i=0; i<300; i+=2){
-        ctx.fillRect(oX+dxS-i,oY-200+dyS+i,1,1);
+    ctx.fillStyle = "red";
+    for(let i=0; i<600; i+=2){
+        ctx.fillRect(oX+dxS-i,oY-400+dyS+i,1,1);
     }
     dxS += 2;
     dyS += 2;
@@ -109,12 +109,12 @@ let timerId = setInterval(() => {
     strokeSixStar("white");
 
     ctx.textAlign = "center";
-    ctx.font = "30px ''";
+    ctx.font = "100px ''";
     ctx.fillStyle = "white";
-    ctx.fillText("第77回",oX,oY+130);
-    ctx.fillText("修猷大文化祭",oX,oY+170);
+    ctx.fillText("第77回",oX,oY+340);
+    ctx.fillText("修猷大文化祭",oX,oY+450);
 
-    if(dx < -300){
+    if(dx < -600){
         goldSixStar();
         strokeSixStar("white")
         clearInterval(timerId);
