@@ -1,5 +1,6 @@
 #canvas{
-    
+    width: 3500px;
+    height: 3500px;
 }
 #canvas{
     z-index: 100;
