@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" style="background-color:#000;">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +9,19 @@
 </head>
 <body id="body">
     <div id="load">
-        <video src="rokkousei.mp4" type="video/mp4" playsinline loop autoplay muted id="video" style="position:absolute"></video>
+        <video src="loading.mp4" type="video/mp4" playsinline loop autoplay muted id="video" style="position:absolute"></video>
     </div>
     <div id="main" style="display:none">
-        <h1>修猷館大文化祭</h1>
-        <h3>ようこそ</h3>
-        <h3>アクセス</h3>
+
+        <header>
+            <ul id="headBar">
+                <li><a href="#top">TOP</a></li>
+                <li><a href="#intro">INTRO</a></li>
+                <li><a href="#news">NEWS</a></li>
+                <li><a href="#access">ACCESS</a></li>
+            </ul>
+        </header>
+
     </div>
 
     <script src="script.js"></script>
