@@ -8,4 +8,4 @@ video.height = window.innerHeight;
 //window.width > video.width
 if(window.innerWidth > video.height*0.7013){
     video.style.left = (window.innerWidth-video.height*0.7013)/2 +"px";
-}else alert("a");
+}else{};
