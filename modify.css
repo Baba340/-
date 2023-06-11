@@ -1,0 +1,21 @@
+
+.section-top {
+	background-image: url(img/background.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.cover-1 .hb-gallery-artworks {
+	background-image: url(img/cover.jpg);
+	background-position: bottom;
+}
+
+.poster .hb-gallery-artworks {
+  background-image: url(img/poster.jpg);
+  background-position: top;
+}
+.cover-2 .hb-gallery-artworks {
+  background-image: url(img/phenix-bg.jpg);
+  background-position: center;
+}

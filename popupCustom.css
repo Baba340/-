@@ -1,0 +1,62 @@
+:root {
+	--animate-duration: 800ms;
+}
+.swal2-popup {
+	--animate-duration: 400ms;
+}
+
+.swal2-popup {
+	border-radius: 0;
+	color: #222;
+	margin-bottom: 32px;
+	background-color: #fefefe;
+}
+
+.popup-theme {
+	line-height: 2.8rem;
+	text-align: left;
+	padding: 16px 12px;
+	border-radius: 2px;
+	/* font-family: "San Francisco", '游明朝 Bold', 'Yu Mincho bold', 'Hiragino Mincho Pro', serif; */
+}
+
+.popup-theme.red {
+	background-color: #ed0000;
+	color: #fefefe;
+}
+
+.popup-theme.blue {
+	background-color: #0050c7;
+	color: #fefefe;
+}
+
+.popup-theme.yellow {
+	background-color: #fef200;
+	color: #333;
+}
+
+.popup-theme.white {
+	background-color: #222;
+	color: #fefefe;
+}
+
+.popup-theme-heading {
+	font-size: 1.4rem;
+	padding: 4rem 0 0.5rem;
+	font-weight: bold;
+	font-family: 'Noto Serif JP', serif;
+}
+
+.popup-theme-heading:first-of-type {
+	padding: 0 0 0.5rem;
+}
+
+.swal2-close:focus {
+	box-shadow: none;
+}
+@media only screen and (max-width: 500px) {
+	.popup-theme {
+		line-height: 2.2rem;
+		font-size: 1rem;
+	}
+}
