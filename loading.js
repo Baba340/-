@@ -1,7 +1,24 @@
 window.onload = function(){
     //低電力モード検出
     document.getElementById("loadingVideo").play().catch((error) => {
-        alert("低電力モードではページが正常に作動しない場合があります。低電力モードを解除して再度読み込んでください。");
+        Swal.fire({
+            html : "低電力モードではページが正常に動作しません",
+            icon : "warning",
+            showCancelButton : true,
+            confirmButtonText : "正常に動作させる",
+            cancelButtonText : "このまま続ける"
+        }).then((result) => {
+            if(result.isConfirmed){
+                Swal.fire({
+                    html : "低電力モードを解除したら<br>「完了」を押してください", 
+                    confirmButtonText : "完了"
+                }).then((result2) => {
+                    if(result2.isConfirmed){
+                        window.location.reload ();
+                    }
+                })
+            }
+        });
     });
     setTimeout(() => {
         //loadingを隠してcontentを見せる
