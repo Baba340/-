@@ -1,0 +1,355 @@
+@charset "utf-8";
+
+@media (max-width: 800px) {
+
+  /* 一括指定CSS ここから*/
+  .titles {
+    width: 200px;
+    margin-bottom: 8px;
+    padding-left: 8px;
+    padding-bottom: 3px;
+    font-size: 24px;
+  }
+  /* 一括指定CSS ここまで*/
+
+
+  /* headerここから */
+  .header-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    height: 50px;
+    position: relative;
+  }
+
+  .header-logo  img {
+    width: 40px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+
+  .header-logo div {
+    font-size: 13px;
+    position: absolute;
+    top: -3.5px;
+    left: 45px;
+  }
+
+  .hamburger-menu-button {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 60px;
+    height: 50px;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(0, 200, 255);
+    border: none;
+    border-radius: 0;
+    outline: none;
+    padding: 12px 0 5px 0;
+  }
+
+  .icon-item {
+    height: 4px;
+    width: 35px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-left: 12.5px;
+    margin-bottom: 7px;
+    transition: all 0.3s ease;
+  }
+
+  .show-icon-animate .line1{transform: translateY(11px) rotate(-45deg);}
+  .show-icon-animate .line2{transform: translateY(50%) translateX(150%); opacity: 0;}
+  .show-icon-animate .line3{transform: translateY(-11px) rotate(45deg);}
+
+  .header-site-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 200, 255);
+    box-shadow: 0px 3px 10px rgb(110, 110, 110);
+    padding-top: 30px;
+    padding-bottom: 50px;
+    transform: translatex(calc(100vw + 10px));/* 10px足してbox-shadowが映り込むのを防ぐ */
+    transition: all 0.4s ease;
+  }
+
+  .header-site-menu.show-header-site-menu {
+    transform: translateX(0);
+  }
+
+  .site-menu ul {
+    display: block;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .site-menu li {
+    margin-top: 15px;
+  }
+  /* headerここまで */
+
+
+  /* mainここから */
+
+  /* top-anchorここから */
+  .main {
+    margin-top: 50px;
+  }
+
+  .first-view {
+    height: calc(100vh - 50px);
+  }
+
+  .first-view img {
+    height: calc(100vh - 50px);
+  }
+
+  .first-view-text {
+    font-size: 25px;
+  }
+
+  .first-view-text-br {
+    display: block;
+  }
+
+  .slogan {
+    flex-direction: column;
+  }
+
+  .slogan::before {
+    transform: skewY(40deg);
+    height: 40vh;
+    bottom: 20%;
+  }
+
+  .slogan::after {
+    transform: skewY(30deg);
+    height: 40vh;
+    bottom: 20%;
+  }
+
+  .slogan-text-title {
+    font-size: 15px;
+  }
+
+  .slogan-text {
+    margin-left: 10px;
+    font-size: 12px;
+  }
+
+  .slogan img {
+    height: 50vh;
+    max-width: none;
+  }
+  /* top-anchorここまで */
+
+  /* about-anchorここから */
+  .message {
+    margin-top: 80px;
+    display: block;
+    width: 100%;
+  }
+
+  .messages h1 {
+    padding-top: 20px;
+  }
+
+  .message img {
+    width: 100%;
+    height: auto;
+    box-shadow: -10px -10px 0 #C0C0C0;
+  }
+
+  .message-text {
+    margin-left: 0px;
+    margin-top: 30px;
+    position: relative;
+    max-width: none;
+  }
+
+  .reverse .message-text {
+    margin-right: 0px;
+  }
+
+  .background-diagonal::before {
+    transform: skewY(-40deg);
+    height: 40vh;
+    bottom: 50%;
+  }
+
+  .background-diagonal::after {
+    transform: skewY(-30deg);
+    height: 40vh;
+    bottom: 50%;
+  }
+  /* about-anchorここまで */
+
+  /* program-anchorここから */
+  [ data-horizonflow ] > * {
+    top: 80px;
+  }
+
+  .program-title {
+    top: 75px !important;
+    height: 27.5px !important;
+  }
+
+  .program-list {
+    padding: 0px 20px 0px 20px;
+  }
+
+  .program-list li {
+    margin-left: 20px;
+  }
+  /* program-anchorここまで */
+
+  /* block-anchorここから */
+  .block h2 {
+    font-size: 60px; 
+    top: -90px;
+  }
+
+  .block-inner {
+    display: block;
+  }
+
+  .block-inner img {
+    width: 60%;
+    display: block;
+    margin: 0 auto 10px auto;
+  }
+
+  .block-inner .block-text {
+    margin-left: 0;
+  }
+
+  .theme-section {
+    margin-bottom: 7px;
+  }
+
+  .theme {
+    font-size: 17px;
+  }
+
+  .theme-genre {
+    font-size: 13px;
+  }
+
+  .block-slogan-section {
+    display: block;
+  }
+
+  .block-slogan-title {
+    font-size: 45px;
+  }
+
+  .block-slogan-title .rubi {
+    font-size: 15px;
+  }
+
+  .block-triangleBottom {
+    height: 150px;
+    bottom: -150px;
+  }
+  /* block-anchorここまで */
+
+  /* artwork-anchorここから */
+  .artworks {
+    padding-top: 150px;
+  }
+  /* artwork-anchorここまで */
+
+  /* mainここまで */
+
+
+  /* footerここから */
+  .location-map {
+    width: 500px;
+    margin-top: 45px;
+  }
+
+  .footer {
+    padding-top: 10px;
+  }
+
+  .footer-logo {
+    width: 70px;
+    margin-top: 20px;
+  }
+
+  .footer-departmentName {
+    margin-top: 20px;
+    width: auto;
+    padding-top: 20px;
+  }
+  /* footerここまで */
+
+
+  /*固定headerによるアンカーのずれを修正*/
+  #top-anchor, #program-anchor, #block-anchor {
+    content: "";
+    height: 50px;
+    margin-top: -50px;
+    display: block;
+    visibility: hidden;
+  }
+  
+  #about-anchor {
+    content: "";
+    height: 100px;
+    margin-top: -100px;
+    display: block;
+    visibility: hidden;
+  }
+
+  #artwork-anchor {
+    content: "";
+    height: 0px;
+    margin-top: 0px;
+    display: block;
+    visibility: hidden;
+  }
+
+  /* messages imgとmessageをつなぐ線のスタイル・アニメーション */
+  .message .connect-imgTotext {
+    /* border-top: none;
+    border-left: 4px dotted; */
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    right: 50%;
+    height: 30px;
+    border-top: none;
+    border-left: 4px dotted;
+    z-index: 10;
+    animation: connectBorderAnimation-resp 3.5s infinite;
+  }
+
+  .message .connect-imgTotext-reverse {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    right: 50%;
+    height: 30px;
+    border-top: none;
+    border-left: 4px dotted;
+    z-index: 10;
+    animation: connectBorderAnimation-resp 3.5s infinite;
+  }
+
+  .kancho .connect-imgTotext {border-color: #54627F;}
+  .uncho .connect-imgTotext-reverse {border-color: #F2795C;}
+  .somu .connect-imgTotext {border-color: #BDAD9E;}
+
+  @keyframes connectBorderAnimation-resp {
+    0% {top: 0px;}
+    30% {top: -30px;}
+  }
+
+}
