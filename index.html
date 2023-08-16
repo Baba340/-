@@ -4,7 +4,7 @@
 <head>
 
   <meta charset="UTF-8">
-  <title>第76回修猷大運動会ホームページ</title>
+  <title>第76回修猷大運動会公式ホームページ</title>
   <link rel="icon" href="img/sixStar.gif">
   <meta name="description" content="第76回修猷大運動会の情報や魅力をお伝えします。">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +14,14 @@
   <link rel="stylesheet" href="loading.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style-resp.css">
+
+  <!--fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
 
 </head>
 
@@ -25,14 +33,14 @@
   </div>
 
   <!--メインコンテンツ-->
-  <div class="content">
+  <div class="content" id="content">
 
     <!-- headerここから -->
     <header class="header">
       <div class="header-inner">
         <a class="header-logo" href="index.html">
           <img src="img/sixStar.gif" alt="HOME">
-          <div>福岡県立<br>修猷館高校</div>
+          <div>福岡県立<br>修猷館高等学校</div>
         </a>
         <div title="ハンバーガーメニューボタン" class="hamburger-menu-button">
           <div class="icon-item line1"></div>
@@ -45,8 +53,8 @@
               <li><a href="#top-anchor">Top</a></li>
               <li><a href="#about-anchor">About</a></li>
               <li><a href="#program-anchor">Program</a></li>
-              <li><a href="#block-anchor">Block</a></li>
-              <li><a href="#artwork-anchor">Artwork</a></li>
+              <li><a href="#block-anchor">Blocks</a></li>
+              <li><a href="#artwork-anchor">Artworks</a></li>
             </ul>
           </nav>
         </div>
@@ -61,12 +69,18 @@
       <!--top-anchor--><div id="top-anchor"></div>
         <!--ページトップビュー-->
         <div class="first-view">
-          <img src="img/sunrise.jpeg" alt="" class="blue-sky-img">
-          <img src="img/shuyu-school-building.png" alt="" class="school-img" id="normal-img">
-          <img src="img/shuyu-school-building-resp.png" alt="" class="school-img" id="resp-img">
-          <div class="first-view-text">
-            <h1>第76回<br class="first-view-text-br">修猷大運動会</h1>
+          <div class="images">
+            <img src="img/blue-sky-img.jpeg" alt="" class="blue-sky-img">
+            <img src="img/shuyu-school-building.png" alt="" class="school-img luxy-el" id="normal-img" data-speed-y="-10">
+            <img src="img/shuyu-school-building-resp.png" alt="" class="school-img luxy-el" id="resp-img" data-speed-y="-10">
+            <img src="img/plane.png" class="plane-img luxy-el" id="plane-img" alt="" data-speed-x="30" data-horizontal="1">
+            <img src="img/pine.png" class="pine-img luxy-el" alt="" data-speed-y="-30">
           </div>
+            <div class="first-view-text luxy-el" data-speed-y="10">
+              <img src="img/first-view-text1.png" alt="" class="first-view-text-one">
+              <!-- <br class="first-view-text-br"> -->
+              <img src="img/first-view-text2.png" alt="" class="first-view-text-two">
+            </div>
           <div class="first-view-triangle"></div>
         </div>
         <!--ポエム-->
@@ -90,12 +104,13 @@
             <h1 class="titles">Slogan</h1>
             <p>
               <span class="slogan-text-title">『暁天』</span><br>
-              暁天、本来は夜明け前の空のことを指す。<br>
-              今年の運動会は様々な点で「夜明けの年」だと言える。<br>
-              そんな暁天を翔んでいく今年の修猷生たちの姿は、<br>
-              きっと、『不死鳥』よりも力強いものであるはずだ。<br>
-              伝説を受け継ぐだけでなく、伝説を更に創り上げるために。<br>
-              仰天にあふれた暁天を、切り開いてゆく。
+              暁天とは、新たな1日への可能性を秘めた空、<br>
+              澄み切った、夜明けの空だ。<br>
+              大きな困難を経て創り上げるこの大運動会は、修猷の、<br>
+              そして修猷生の、新たな物語の幕開けとなる。<br>
+              我らの本気に、底力に、この1日にかける思いに、<br>
+              そして、今日ここで、修猷の夜明けを飾るドラマの数々に、<br>
+              仰天せよ。
             </p>
           </div>
           <img src="img/slogan.png" alt="slogan">
@@ -108,12 +123,13 @@
 
           <!--館長より-->
             <div class="message kancho">
-              <img src="img/kancho.jpg" alt="館長">
+              <img src="img/kancho.png" alt="館長">
               <div class="message-text">
                 <div class="connect-imgTotext"></div>
-                <h2>修猷太郎</h2>
-                <h3>第34代館長</h3>
-                <p>「今年は、思いっきり修猷大運動会をやる！」<br><br>今年度はじめの学校としての宣言。そのために、学校として・修猷生として最善を尽す。今、学校の当たり前が通用しない。当然、修猷大運動会も。だから、挑戦（改革）と安全・安心、一歩前への勇気。 困難な状況（環境の変化、コロナ禍、多様な価値観等）であるからこそ新たに創り出せるものがある。互いに思いを語り、知恵を振り絞り、苦悩し、挑み、こだわりをもって成し遂げる。 とてつもない自由な集団体験、日本に誇りうる行事：修猷大運動会。君たちが創造する最高の感動で、世の中を元気に導くメッセージを発信しよう！<br><br>最後に、復活を願う『すまん』という魔法の言葉。 かつてよく使われていた失敗から学ぶ修猷文化の一つ。 一瞬にして次のチャレンジに向かうこだわりとおおらかさのある合言葉。</p>
+                <h2>中神 智文</h2>
+                <h3>館長</h3>
+                <p>　学校の中には様々な生徒の姿がある。勉学に励む姿、スポーツに打ち込む姿、沈思黙考する姿、友とくつろぐ姿、等々。中でも修猷館の大運動会は、館歌にも歌われる「青春の血は玄界の荒き怒濤と沸き立ちて」の一つの姿ではないだろうか。四つのブロックそれぞれが一致団結して一つ一つの競技に心血を注ぐ、そしてそれは学校全体としての大きな一つのまとまりになっていく。<br><br>
+                  　当たり前の話だが、運動会は一人ではできない。上級生のリーダーシップが試される場でもある。各々が自分の役目を果たし、最高の場面を創造することを期待している。</p>
               </div>
             </div>
 
@@ -124,13 +140,13 @@
                 <div class="connect-imgTotext-reverse"></div>
                 <h2>田中 琉惺</h2>
                 <h3>大運動会運営委員長</h3>
-                <p>修猷館の大運動会はこの夏、新たな朝を迎える。<br>
+                <p>　修猷館の大運動会はこの夏、新たな朝を迎える。<br>
                   如法闇夜の中にありながら、その暗闇すらも進歩の糧とし、必死に繋がれてきた熱い夏の結晶。<br>
-                  76代を数える数多くの偉大な先輩方から託された運動会を、他ならぬ僕たち自身の手で新たなステージへと昇華させる。その責務の重圧は、むしろ僕たち修猷生の底力への着火剤となった。<br>
+                  75代を数える数多くの偉大な先輩方から託された運動会を、他ならぬ僕たち自身の手で新たなステージへと昇華させる。その責務の重圧は、むしろ僕たち修猷生の底力への着火剤となった。<br>
                   逆境にも潰されず、進化の止まらなかった修猷の真骨頂を、時代の波に揉まれながら、本質を凝縮して磨かれてきた伝統を、そして何の遠慮もなく暁の空に轟かせる修猷生の本気を、ご照覧あれ。<br><br>
-                  4年分の全力と76年分の伝統を抱え、グラウンドに翻る健児の颯爽たる勇姿は、連綿と続く修猷の系譜における新たな導となるに違いない。<br>
-                  修猷生よ、そんな運動会を創り上げよう。<br><br>
-                  刮目せよ、そして、仰天せよ
+                  　4年分の全力と75年分の伝統を抱え、グラウンドに翻る健児の颯爽たる勇姿は、連綿と続く修猷の系譜における新たな導となるに違いない。<br><br>
+                  　修猷生よ、そんな運動会を創り上げよう。<br>
+                  　刮目せよ、そして、仰天せよ。
                 </p>
               </div>
             </div>
@@ -142,11 +158,11 @@
                 <div class="connect-imgTotext"></div>
                 <h2>川添 天</h2>
                 <h3>生徒会総務</h3>
-                <p>  修猷健児の諸君、とうとうこの日が来た。あとはやりきるだけだ。泣いても笑っても今日で終わる。全力でやりきろう。<br>
+                <p>　修猷健児の諸君、とうとうこの日が来た。あとはやりきるだけだ。泣いても笑っても今日で終わる。全力でやりきろう。<br>
                   そして、この大運動会というバトンを未来へつなげよう。<br><br>
-                  今これを見て、修猷館の歴史的な一日を見届けようとしてくれている人たちに伝えたい。修猷生とは多くのことに挑戦し、がむしゃらに最後までやり遂げる人だ。私はそう考えている。<br>
+                  　今これを見て、修猷館の歴史的な一日を見届けようとしてくれている人たちに伝えたい。修猷生とは多くのことに挑戦し、がむしゃらに最後までやり遂げる人だ。私はそう考えている。<br>
                   修猷大運動会ではこのような修猷生を多く見ることができる。<br><br>
-                  今日は私たちの姿を目に焼き付けてほしい。これがこれからの社会を担う私たちの姿だ。<br>
+                  　今日は私たちの姿を目に焼き付けてほしい。これがこれからの社会を担う私たちの姿だ。<br>
                   日本に、勇気と希望を。</p>
               </div>
             </div>
@@ -155,124 +171,135 @@
 
       <!--program-anchor--><div id="program-anchor"></div>
         <!--プログラム-->
-        <div data-horizonflow="3" class="program-list-outer">
-          <h1 class="titles program-title">Program</h1>
-          <ul class="program-list">
-            <li>
-              <img src="img/pict/1.png" alt="">
-              <div class="program-top-bg"></div>
-              <div class="program-text">
-                <h2>陸上α</h2>
-                <p>通称“応コン”。ブロック全員がオリジナル 詞の応援歌に乗せ、パネルを使って様々な 言葉や絵を表現します。 パネル、テーマ、アイデアの３観点に沿っ て採点が行われ、合計得点で競います。</p>
-              </div>
-              <div class="program-time">12:00～13:00</div>
-            </li>
-            <li>
-              <img src="img/pict/2.png" alt="">
-              <div class="program-top-bg"></div>
-              <div class="program-text">
-                <h2>棒引き</h2>
-                <p>各ブロック男女80名と綱の最後尾を預かるアンカーマン1名で力いっぱい綱を引き合います。</p>
-              </div>
-              <div class="program-time">12:00～13:00(1回戦)<br>13:45～13:50(2回戦)</div>
-            </li>
-            <li>
-              <img src="img/pict/3.png" alt="">
-              <div class="program-top-bg"></div>
-              <div class="program-text">
-                <h2>タンブリング</h2>
-                <p>自陣に設置された7本の旗を守りながら、相手陣の旗を取りにいく競技。 ただ旗を取るだけでなく、攻めの選手が付けているタグを上手く奪うことができるかも勝負のカギ！</p>
-              </div>
-              <div class="program-time">12:00～13:00</div>  
-            </li>
-            <li>
-              <img src="img/pict/4.png" alt="">
-              <div class="program-top-bg"></div>
-              <div class="program-text">
-                <h2>綱引き</h2>
-                <p>10人11脚で走り、縄跳びまでするリレー。バトンの代わりに帽子を使うのがこの競技のポイント。</p>
-              </div>
-              <div class="program-time">12:00～13:00</div>      
-            </li>
-            <li>
-              <img src="img/pict/5.png" alt="">
-              <div class="program-top-bg"></div>
-              <div class="program-text">
-                <h2>大帽走</h2>
-                <p>大運動会の開幕競技でお馴染み！ 各ブロックの俊足たちが熱いレ ースを繰り広げます。</p>
-              </div>
-              <div class="program-time">12:00～13:00</div>      
-            </li>
-            <li>
-              <img src="img/pict/6.png" alt="">
-              <div class="program-top-bg"></div>
-              <div class="program-text">
-                <h2>騎馬戦</h2>
-                <p>大運動会の開幕競技でお馴染み！ 各ブロックの俊足たちが熱いレ ースを繰り広げます。</p>
-              </div>
-              <div class="program-time">12:00～13:00</div>      
-            </li>
-            <li>
-              <img src="img/pict/7.png" alt="">
-              <div class="program-top-bg"></div>
-              <div class="program-text">
-                <h2>創作ダンス</h2>
-                <p>大運動会の開幕競技でお馴染み！ 各ブロックの俊足たちが熱いレ ースを繰り広げます。</p>
-              </div>
-              <div class="program-time">12:00～13:00</div>      
-            </li>
-            <li>
-              <img src="img/pict/8.png" alt="">
-              <div class="program-top-bg"></div>
-              <div class="program-text">
-                <h2>旗取り</h2>
-                <p>大運動会の開幕競技でお馴染み！ 各ブロックの俊足たちが熱いレ ースを繰り広げます。</p>
-              </div>
-              <div class="program-time">12:00～13:00</div>      
-            </li>
-            <li>
-              <img src="img/pict/9.png" alt="">
-              <div class="program-top-bg"></div>
-              <div class="program-text">
-                <h2>エール</h2>
-                <p>大運動会の開幕競技でお馴染み！ 各ブロックの俊足たちが熱いレ ースを繰り広げます。</p>
-              </div>
-              <div class="program-time">12:00～13:00</div>      
-            </li>
-            <li>
-              <img src="img/pict/10.png" alt="">
-              <div class="program-top-bg"></div>
-              <div class="program-text">
-                <h2>応援コンテスト</h2>
-                <p>大運動会の開幕競技でお馴染み！ 各ブロックの俊足たちが熱いレ ースを繰り広げます。</p>
-              </div>
-              <div class="program-time">12:00～13:00</div>      
-            </li>
-            <li>
-              <img src="img/pict/11.png" alt="">
-              <div class="program-top-bg"></div>
-              <div class="program-text">
-                <h2>陸上β</h2>
-                <p>大運動会の開幕競技でお馴染み！ 各ブロックの俊足たちが熱いレ ースを繰り広げます。</p>
-              </div>
-              <div class="program-time">12:00～13:00</div>      
-            </li>
-            <li>
-              <img src="img/pict/12.png" alt="">
-              <div class="program-top-bg"></div>
-              <div class="program-text">
-                <h2>陸上γ</h2>
-                <p>大運動会の開幕競技でお馴染み！ 各ブロックの俊足たちが熱いレ ースを繰り広げます。</p>
-              </div>
-              <div class="program-time">12:00～13:00</div>      
-            </li>
-            <li class="copyright-pict">
-              <div>ピクトグラム&copy;古谷櫂</div>
-            </li>
-            <li class="program-li-last">
-              <!-- <img src="img/program-last-arrow.svg" alt=""> -->
-            </li>
-          </ul>
+        <div class="program-container">
+          <div data-horizonflow="3" class="program-list-outer">
+            <h1 class="titles program-title">Program</h1>
+            <ul class="program-list" id="program-list">
+              <li>
+                <img src="img/pict/1.png" alt="">
+                <div class="program-top-bg"></div>
+                <div class="program-text">
+                  <h2>陸上α</h2>
+                  <p>一番最初に行われるリレー競技。ここで勝てるとブロックに勢いがつく。大運動会の幕開けを飾るのにふさわしい本気の走りには目を奪われること間違いなし！</p>
+                </div>
+                <div class="program-time">8:27～8:42</div>
+              </li>
+              <li>
+                <img src="img/pict/2.png" alt="">
+                <div class="program-top-bg"></div>
+                <div class="program-text">
+                  <h2>棒引き</h2>
+                  <p>90秒の間に12本の棒を自陣に引き合う。真ん中にあるスペシャル棒は高得点を狙えるチャンス！女子たちの女を捨てた本気のバトルは見ごたえ十分！</p>
+                </div>
+                <div class="program-time">8:46～8:56(予選)<br>15:06～15:16(決勝)</div>
+              </li>
+              <li>
+                <img src="img/pict/3.png" alt="">
+                <div class="program-top-bg"></div>
+                <div class="program-text">
+                  <h2>タンブリング</h2>
+                  <p>男子全員で出場。各ブロックのテーマを演技で表現し、技の完成度や独創性を競う。危険が伴うからこそ、全員が真剣に取り組んでいる。７ピラや４タワーなどの大技を成功させたときの感動はひとしお。
+                    </p>
+                </div>
+                <div class="program-time">8:58～9:31</div>  
+              </li>
+              <li>
+                <img src="img/pict/4.png" alt="">
+                <div class="program-top-bg"></div>
+                <div class="program-text">
+                  <h2>綱引き</h2>
+                  <p>各ブロック男女80人ずつと最後尾のアンカーマンで綱を引き合う。大運動会トップクラスの規模で大迫力！「音頭取り」や「旗持ち」が選手たちを鼓舞する。</p>
+                </div>
+                <div class="program-time">9:35～9:56(一回戦)<br>14:29～14:39(二回戦)</div>      
+              </li>
+              <li>
+                <img src="img/pict/5.png" alt="">
+                <div class="program-top-bg"></div>
+                <div class="program-text">
+                  <h2>大帽走</h2>
+                  <p>10人11脚で走り、縄跳びや台風の目、ジグザグ走りなどの仕掛けを超えていく。バトンの代わりに巨大な帽子をかぶって走るのが特徴。チーム全体の団結力が問われる。</p>
+                </div>
+                <div class="program-time">10:00～10:10</div>      
+              </li>
+              <li>
+                <img src="img/pict/6.png" alt="">
+                <div class="program-top-bg"></div>
+                <div class="program-text">
+                  <h2>騎馬戦</h2>
+                  <p>相手の大将騎を落馬させるか、終了時により多くの騎馬が残っていたブロックの勝利。緊張感漂う雰囲気や危険も覚悟で全力でぶつかる姿が魅力。クライマックスの大将騎同士の戦いには注目！！</p>
+                </div>
+                <div class="program-time">10:12～10:33(予選)<br>14:43～15:04(決勝)</div>      
+              </li>
+              <li>
+                <img src="img/pict/7.png" alt="">
+                <div class="program-top-bg"></div>
+                <div class="program-text">
+                  <h2>創作ダンス</h2>
+                  <p>女子全員で出場。ブロックごとにオリジナルのダンスを披露し、その美しさを競う。統一感のある動きは大迫力。各ブロックのダンステーマはブロック紹介ページに掲載。</p>
+                </div>
+                <div class="program-time">10:35～10:57</div>      
+              </li>
+              <li>
+                <img src="img/pict/8.png" alt="">
+                <div class="program-top-bg"></div>
+                <div class="program-text">
+                  <h2>旗取り</h2>
+                  <p>相手の攻撃を防ぎつつ相手コートの３本の旗を倒しにいき、先にすべての旗を倒すか、より多くの点数を取ったブロックの勝利。昨年に新競技として登場したばかりの、注目の競技！</p>
+                </div>
+                <div class="program-time">10:59～11:06(予選)<br>13:22～13:29(決勝)</div>      
+              </li>
+              <li>
+                <img src="img/pict/9.png" alt="">
+                <div class="program-top-bg"></div>
+                <div class="program-text">
+                  <h2>エール</h2>
+                  <p>演舞の「エーラー」と、チアダンスの「エールっこ」が、２か月かけて作り上げた完成度の高いエールで選手たちを応援。エーラーの迫真の演舞には心を動かされること間違いなし！</p>
+                </div>
+                <div class="program-time">11:08～11:36(ブロックエール)<br>14:02～14:09(全体エール)</div>      
+              </li>
+              <li>
+                <img src="img/pict/10.png" alt="">
+                <div class="program-top-bg"></div>
+                <div class="program-text">
+                  <h2>応援コンテスト</h2>
+                  <p>通称「応コン」。ブロック生全員でパネルを操作し、絵や言葉を応援歌に乗せて表現する。今回は４年ぶりに声出しが解禁され、一体感も迫力もさらにパワーアップ！
+                    </p>
+                </div>
+                <div class="program-time">12:27～13:07</div>      
+              </li>
+              <li>
+                <img src="img/pict/11.png" alt="">
+                <div class="program-top-bg"></div>
+                <div class="program-text">
+                  <h2>陸上β</h2>
+                  <p>生徒から大人気の障害物競争。ぐるぐるバット、二人三脚、パン食い競争などの定番競技だけでなく、美白deリボンなどのおもしろ競技も。足の速さに関係なく得意分野で勝負でき、出る人も見る人も楽しいのが特徴。</p>
+                </div>
+                <div class="program-time">13:34～13:57</div>      
+              </li>
+              <li>
+                <img src="img/pict/12.png" alt="">
+                <div class="program-top-bg"></div>
+                <div class="program-text">
+                  <h2>陸上γ</h2>
+                  <p>各ブロックの代表選手が出場する、大運動会ラストの競技。スウェーデンリレーとブロック対抗リレーの２つに分かれている。ブロック対抗リレー最後のブロック長対決は必見！！
+                    </p>
+                </div>
+                <div class="program-time">15:20～15:34</div>      
+              </li>
+              <li class="copyright-pict">
+                <div>ピクトグラム&copy;古谷櫂</div>
+              </li>
+              <!--<li class="program-li-last">
+              </li>-->
+            </ul>
+          </div>
+          <!--スクロールを促す矢印-->
+          <div class="container" id="program-arrows">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <span class="text">scroll</span>
+          </div>
         </div>
 
       <!--block-anchor--><div id="block-anchor"></div>
@@ -284,47 +311,46 @@
             <h2>RED</h2>
             <div class="block-triangleTop"></div>
             <div class="block-inner">
-              <img src="img/block-leader-red.png" alt="">
               <div class="block-text">
                 <div class="block-slogan-section">
-                  <div class="block-slogan-title"><div class="rubi">けんらん</div>絢爛</div>
-                  <div class="block-slogan-text">ブロック一人ひとりが、目が眩むほど煌びやかな姿を修猷大運動会に轟かせること。</div>
+                  <div class="block-slogan-title"><div class="rubi">かくしん</div>赫心</div>
+                  <div class="block-slogan-text">赫心とは赤々と輝き、燃え盛るような我々の心を表す。2023REDを象徴する私たちにとって宝物のような言葉である。</div>
                 </div>
-                <div class="block-leader-text">目に見えぬ障壁と闘ってきたこの夏、俺たちは大いなる成長を遂げた。己を、同氏を、そしてREDを信じろ。真っ赤に燃え盛る俺たちの青春のすべてを思う存分解き放て。この修猷大運動会に321人のけんらんたる姿を、今。</div>
+                <div class="block-leader-text">歴代最高の運動会を創る。この想いを胸に今日まで駆け抜けてきた。私がここで語る必要はない。RED314人のこの夏の努力、費やした時間、そして火傷してしまいそうな程アツい心をあなたの目と心に焼き付けて欲しい。</div>
               </div>
             </div>
-            <button class="see-all-theme" onclick="seeAllTheme(0)">全てのテーマを見る<span class="button-arrow"></span></button>
+            <!-- <button class="see-all-theme" onclick="seeAllTheme(0)">全てのテーマを見る<span class="button-arrow"></span></button> -->
             <div class="all-theme">
               <div class="themes">
                 <div class="theme-section">
-                  <div class="theme">博多祇園山笠～今心（ここ）に山笠魂を～</div>
+                  <div class="theme">超克～魅せつけろ侍魂～</div>
                   <div class="theme-genre">ダンステーマ</div>
                 </div>
-                <p>コロナによる2年間の中止を乗り越え今年の夏3年ぶりに復活した博多祇園山笠。この博多の伝統行事は、元々は疫病退散を願って始まった神事です。私たちは780年以上受け継がれてきた山笠を形作る大切なもの、山笠魂を表現します。疫病退散の想いを胸に、RED女子の熱く盛り上がるダンスで、今ここに、心に、山笠魂を燃やし4分半を駆け抜けます！！</p>
+                <p>超克とは困難や苦しみに打ち勝ちそれを乗り越えるという意味だ。今年行われたWBCをモチーフとした作品で、負けてもくじけずに挑み続ける選手たちのやる気や努力、選手達を精一杯応援する人々の熱気をまとめて侍魂として表現する。力強いダンス、コロコロ変わる表情、ドキドキする展開、見ていて心動かされるダンスに乞うご期待。</p>
               </div>
               <div class="themes">
                 <div class="theme-section">
-                  <div class="theme">煉火（れんか）</div>
+                  <div class="theme">火鼠</div>
                   <div class="theme-genre">タンブリングテーマ</div>
                 </div>
-                <p>「煉」には「精錬する」という意味があり、「火」は赤ブロックを示している。赤ブロックを精錬し、最高のタンブリングを作るという意味合いを込めて決定したテーマ「煉火」。コロナ禍という思い通りにならない環境で、私たちは変化し続け、伝統を繋いできた。このタンブリングでは、コロナ禍に立ち向かった３年間を表現する。</p>
+                <p>火鼠とは中国に伝わる火の中でも生き抜くことのできる伝説の鼠である。ここ数年に及ぶコロナウイルスの猛威の中を見事に生き抜き、新しい時代を築いていく修猷生と重なる部分がある。我々は数々の困難に直面した。そして困難の数だけ成長することができた。この経験を活かし、閉ざされた世界を維新に導くのは我々若者たちでありたい、そう思わせるタンブリングを作ってみせる。</p>
               </div>
               <div class="themes">
                 <div class="theme-section">
-                  <div class="theme">嚇醒（かくせい）</div>
+                  <div class="theme">響炎</div>
                   <div class="theme-genre">応援コンテストテーマ</div>
                 </div>
-                <p>今年、３年振りに認められた応コンでの発声。応コン全力発声の熱気で大運動会を赤く染めるという意志を「嚇」という字に込めた。赤の勢いは止められない。応コンを通して新たな自分を、赤ブロックを目醒めさせる。</p>
+                <p>2023年──我らの応コンは今、かつてないまでに昂る感情を以って修猷館応援コンテストの復活へと駆け続ける。共に激動の時代の終息へと進んでいこう。響炎の名のもと燃え上がる314の魂の響きを篤とご覧あれ。</p>
               </div>
               <div class="themes">
                 <div class="theme-section">
-                  <div class="theme">暁</div>
+                  <div class="theme">闘龍</div>
                   <div class="theme-genre">バックテーマ</div>
                 </div>
-                <p>長い夜が明け、朝日が昇る瞬間は誰もが待ち望んでいる。思うようにいかず苦しい時でも頑張れるのは、その先に光が差すことを信じていられるからだ。この夏を乗り越え、ずっと待ち望んでいた「暁」をRED全員で迎えたい。夜明けに広がる世界が、そこに映る私たちの姿が、何よりも美しいものでありますように。</p>
+                <p>鯉が急流を遡行しきれば龍になる。これは「登龍門」の語源である。私たちはいわば小さな鯉であった。しかし、この2ヶ月間でいくつもの関門と粘り強く闘い、成長し、赤ブロックの優勝、大運動会の成功へと導く龍と成る。そんな『闘う龍』達の勇姿に注目してほしい。</p>
               </div>
             </div>
-            <img src="img/back-red.jpg" alt="" class="back-img">
+            <img src="img/back-red.png" alt="" class="back-img">
             <div class="block-triangleBottom"></div>
           </div>
 
@@ -333,47 +359,46 @@
             <h2>WHITE</h2>
             <div class="block-triangleTop reverse"></div>
             <div class="block-inner">
-              <img src="img/block-leader-red.png" alt="">
               <div class="block-text">
                 <div class="block-slogan-section">
-                  <div class="block-slogan-title"><div class="rubi">けんらん</div>絢爛</div>
-                  <div class="block-slogan-text">ブロック一人ひとりが、目が眩むほど煌びやかな姿を修猷大運動会に轟かせること。</div>
+                  <div class="block-slogan-title"><div class="rubi">そうこう</div>奏皓</div>
+                  <div class="block-slogan-text">本来は奏功。目標を達成するという意味があり、「皓」には、白く輝くという意味がある。白のみんなで唯一のバカッコ良さを発揮して総合優勝に向かって輝き続けていこう。</div>
                 </div>
-                <div class="block-leader-text">目に見えぬ障壁と闘ってきたこの夏、俺たちは大いなる成長を遂げた。己を、同氏を、そしてREDを信じろ。真っ赤に燃え盛る俺たちの青春のすべてを思う存分解き放て。この修猷大運動会に321人のけんらんたる姿を、今。</div>
+                <div class="block-leader-text">修猷大運動会<br>己の全てを出し尽くし、感動を生み、今と昔の修猷健児をつなぐもの。繋いできた伝統に感謝し、理解した上で、俺らの大運動会にしよう。そして俺が掲げるバカッコイイ姿を本番全員で体現しよう。苦しい時、楽しい時に人のためにバカになり、この大運動会 白がやってやろうか。</div>
               </div>
             </div>
-            <button class="see-all-theme" onclick="seeAllTheme(1)">全てのテーマを見る<span class="button-arrow"></span></button>
+            <!-- <button class="see-all-theme" onclick="seeAllTheme(1)">全てのテーマを見る<span class="button-arrow"></span></button> -->
             <div class="all-theme">
               <div class="themes">
                 <div class="theme-section">
-                  <div class="theme">博多祇園山笠～今心（ここ）に山笠魂を～</div>
+                  <div class="theme">We have a dream!〜自由の鐘を鳴り響かせよう～</div>
                   <div class="theme-genre">ダンステーマ</div>
                 </div>
-                <p>コロナによる2年間の中止を乗り越え今年の夏3年ぶりに復活した博多祇園山笠。この博多の伝統行事は、元々は疫病退散を願って始まった神事です。私たちは780年以上受け継がれてきた山笠を形作る大切なもの、山笠魂を表現します。疫病退散の想いを胸に、RED女子の熱く盛り上がるダンスで、今ここに、心に、山笠魂を燃やし4分半を駆け抜けます！！</p>
+                <p>1963年、自由で平等な世の中を目指してキング牧師は立ち上がった。差別されていた頃の悲嘆や恐怖、立ち上がるまでの葛藤、そして覚悟。キング牧師の姿を見て勇気を貰った周りの人々の感情の変化。これらをダンスを通して表現する。歴史的なキング牧師の演説&quot;I have a dream&quot;で語った彼の目指す世界を私たちが創りあげるという思いを伝えたい。</p>
               </div>
               <div class="themes">
                 <div class="theme-section">
-                  <div class="theme">煉火（れんか）</div>
+                  <div class="theme">暁華</div>
                   <div class="theme-genre">タンブリングテーマ</div>
                 </div>
-                <p>「煉」には「精錬する」という意味があり、「火」は赤ブロックを示している。赤ブロックを精錬し、最高のタンブリングを作るという意味合いを込めて決定したテーマ「煉火」。コロナ禍という思い通りにならない環境で、私たちは変化し続け、伝統を繋いできた。このタンブリングでは、コロナ禍に立ち向かった３年間を表現する。</p>
+                <p>季節外れの花「狂花」は時代の荒波に逆らうこの競技を表している。「暁」は時代の夜明け前に戦う我らを表し「華」は輝き、情熱を表す。時代の荒波に逆らう我々の情熱は永遠に輝き続けるという意味である。このテーマの下、我々は「白虎隊」を表現する。彼らは大切な国のため、我々は大切な伝統のために戦い続けるのだ。</p>
               </div>
               <div class="themes">
                 <div class="theme-section">
-                  <div class="theme">嚇醒（かくせい）</div>
+                  <div class="theme">轟魁</div>
                   <div class="theme-genre">応援コンテストテーマ</div>
                 </div>
-                <p>今年、３年振りに認められた応コンでの発声。応コン全力発声の熱気で大運動会を赤く染めるという意志を「嚇」という字に込めた。赤の勢いは止められない。応コンを通して新たな自分を、赤ブロックを目醒めさせる。</p>
+                <p>見る者聴く者そして応コンをするブロック生までもが気持ち良いほど豪快なWHITE応コン。俺らが修猷が揺れるような力強い声で轟かせる。俺らの応コンはWHITE、修猷のみならず、世界中にメッセージを届ける。さあ、応コンの幕開けだ。修猷を、いや世界を震わせろ。</p>
               </div>
               <div class="themes">
                 <div class="theme-section">
-                  <div class="theme">暁</div>
+                  <div class="theme">駛皨通天</div>
                   <div class="theme-genre">バックテーマ</div>
                 </div>
-                <p>長い夜が明け、朝日が昇る瞬間は誰もが待ち望んでいる。思うようにいかず苦しい時でも頑張れるのは、その先に光が差すことを信じていられるからだ。この夏を乗り越え、ずっと待ち望んでいた「暁」をRED全員で迎えたい。夜明けに広がる世界が、そこに映る私たちの姿が、何よりも美しいものでありますように。</p>
+                <p>「誠を尽くせば天に通ずる」。どんな困難や試練があっても、最善を尽くして立ち向かっていけば、いつかそれが実を結び、羽ばたく時がやってくる。逆境を乗り越える姿を表現した、WHITEのバックの力強さを感じてほしい。</p>
               </div>
             </div>
-            <img src="img/back-white.jpg" alt="" class="back-img">
+            <img src="img/back-white.png" alt="" class="back-img">
             <div class="block-triangleBottom reverse"></div>
           </div>
 
@@ -382,47 +407,46 @@
             <h2>BLUE</h2>
             <div class="block-triangleTop"></div>
             <div class="block-inner">
-              <img src="img/block-leader-red.png" alt="">
               <div class="block-text">
                 <div class="block-slogan-section">
-                  <div class="block-slogan-title"><div class="rubi">けんらん</div>絢爛</div>
-                  <div class="block-slogan-text">ブロック一人ひとりが、目が眩むほど煌びやかな姿を修猷大運動会に轟かせること。</div>
+                  <div class="block-slogan-title"><div class="rubi">こうせい</div>煌鍟</div>
+                  <div class="block-slogan-text">1人ひとりが己の輝き方で大運動会を照らし、新たな幕開けの最初に優勝の光を放つのは青だ。315の光を結集した青夏の六光星を創る。</div>
                 </div>
-                <div class="block-leader-text">目に見えぬ障壁と闘ってきたこの夏、俺たちは大いなる成長を遂げた。己を、同氏を、そしてREDを信じろ。真っ赤に燃え盛る俺たちの青春のすべてを思う存分解き放て。この修猷大運動会に321人のけんらんたる姿を、今。</div>
+                <div class="block-leader-text">このひと夏を経てみんなの顔は大きく変わった。自分にしかできない輝き方を持ったみんな、そしてBLUEは最強だ。この修猷大運動会で修猷の本気を体現し、全てを出し切った最後にはみんなで泣こう、笑おう、喜び合おうじゃないか。</div>
               </div>
             </div>
-            <button class="see-all-theme" onclick="seeAllTheme(2)">全てのテーマを見る<span class="button-arrow"></span></button>
+            <!-- <button class="see-all-theme" onclick="seeAllTheme(2)">全てのテーマを見る<span class="button-arrow"></span></button> -->
             <div class="all-theme">
               <div class="themes">
                 <div class="theme-section">
-                  <div class="theme">博多祇園山笠～今心（ここ）に山笠魂を～</div>
+                  <div class="theme">大航海時代〜いざ、大望を解き放て〜</div>
                   <div class="theme-genre">ダンステーマ</div>
                 </div>
-                <p>コロナによる2年間の中止を乗り越え今年の夏3年ぶりに復活した博多祇園山笠。この博多の伝統行事は、元々は疫病退散を願って始まった神事です。私たちは780年以上受け継がれてきた山笠を形作る大切なもの、山笠魂を表現します。疫病退散の想いを胸に、RED女子の熱く盛り上がるダンスで、今ここに、心に、山笠魂を燃やし4分半を駆け抜けます！！</p>
+                <p>大航海時代には、ヨーロッパ諸国による地球規模の航海が行われていた。当時の航海は危険と隣り合わせ。だが、船乗りたちは、未知の領域に進出し、航路を拓くという野望を抱いていた。野望を内に秘めたままで終わらせず、偉業を成し遂げた船乗りたち。現代においても、大きなことを成そうとする時は強く大きな力が必要だ。その&quot;強さ&quot;を各々の思いに乗せ、青ブロック女子全員で体現する。</p>
               </div>
               <div class="themes">
                 <div class="theme-section">
-                  <div class="theme">煉火（れんか）</div>
+                  <div class="theme">狂瀾怒濤</div>
                   <div class="theme-genre">タンブリングテーマ</div>
                 </div>
-                <p>「煉」には「精錬する」という意味があり、「火」は赤ブロックを示している。赤ブロックを精錬し、最高のタンブリングを作るという意味合いを込めて決定したテーマ「煉火」。コロナ禍という思い通りにならない環境で、私たちは変化し続け、伝統を繋いできた。このタンブリングでは、コロナ禍に立ち向かった３年間を表現する。</p>
+                <p>狂瀾怒濤とは、いかり狂ったようにさかまく荒波のことである。荒れ狂う波のごとく会場全体をのみこむタンブリングを作るという意味がこめられている。タンブリングは競技の中で、唯一男子全員が出場する競技であり、もっとも会場にいる観客の心を動かすことができる競枝だと思う。このテーマのもと最高のタンブリングを作り上げる。</p>
               </div>
               <div class="themes">
                 <div class="theme-section">
-                  <div class="theme">嚇醒（かくせい）</div>
+                  <div class="theme">最醒</div>
                   <div class="theme-genre">応援コンテストテーマ</div>
                 </div>
-                <p>今年、３年振りに認められた応コンでの発声。応コン全力発声の熱気で大運動会を赤く染めるという意志を「嚇」という字に込めた。赤の勢いは止められない。応コンを通して新たな自分を、赤ブロックを目醒めさせる。</p>
+                <p>声出し応コンの再生にあたり、コロナ禍から覚醒し、正規の形でできることへの感謝と共に、この代にしかできない、修猷史上最盛の応コンを作り上げる。ブロック生全員の青への想いが詰まった、熱い応魂！</p>
               </div>
               <div class="themes">
                 <div class="theme-section">
-                  <div class="theme">暁</div>
+                  <div class="theme">勇志興星</div>
                   <div class="theme-genre">バックテーマ</div>
                 </div>
-                <p>長い夜が明け、朝日が昇る瞬間は誰もが待ち望んでいる。思うようにいかず苦しい時でも頑張れるのは、その先に光が差すことを信じていられるからだ。この夏を乗り越え、ずっと待ち望んでいた「暁」をRED全員で迎えたい。夜明けに広がる世界が、そこに映る私たちの姿が、何よりも美しいものでありますように。</p>
+                <p>「有志竟成」とは、志を持っていればいつか必ず実現できるという意味である。その雄大で勇ましい姿から、古来「勇魚｣と呼ばれる鯨は、我々の熱い思いを背負い、青ブロックを光輝く未来へと導く一筋の希望となる。</p>
               </div>
             </div>
-            <img src="img/back-blue.jpg" alt="" class="back-img">
+            <img src="img/back-blue.png" alt="" class="back-img">
             <div class="block-triangleBottom"></div>
           </div>
 
@@ -431,47 +455,46 @@
             <h2>YELLOW</h2>
             <div class="block-triangleTop reverse"></div>
             <div class="block-inner">
-              <img src="img/block-leader-red.png" alt="">
               <div class="block-text">
                 <div class="block-slogan-section">
-                  <div class="block-slogan-title"><div class="rubi">けんらん</div>絢爛</div>
-                  <div class="block-slogan-text">ブロック一人ひとりが、目が眩むほど煌びやかな姿を修猷大運動会に轟かせること。</div>
+                  <div class="block-slogan-title"><div class="rubi">はきはつよう</div>覇輝発揚</div>
+                  <div class="block-slogan-text">①意欲②人の上に立とうとする意志③威光を盛んにすること④輝きの発揚<br>今年は輝こう！ではなく私がみんなを輝かせるという意味が込められている。</div>
                 </div>
-                <div class="block-leader-text">目に見えぬ障壁と闘ってきたこの夏、俺たちは大いなる成長を遂げた。己を、同氏を、そしてREDを信じろ。真っ赤に燃え盛る俺たちの青春のすべてを思う存分解き放て。この修猷大運動会に321人のけんらんたる姿を、今。</div>
+                <div class="block-leader-text">全競技制覇は目標ではなく、ノルマ。私自身の夏の思い出など必要ない。全ては勝つことで報われる。勝利に貪欲に喰らいつけ。今年の黄は一味違う。優勝の先にある景色を見に行こう。黄ブロ全員で伝説に名を刻むぞ。</div>
               </div>
             </div>
-            <button class="see-all-theme" onclick="seeAllTheme(3)">全てのテーマを見る<span class="button-arrow"></span></button>
+            <!-- <button class="see-all-theme" onclick="seeAllTheme(3)">全てのテーマを見る<span class="button-arrow"></span></button> -->
             <div class="all-theme">
               <div class="themes">
                 <div class="theme-section">
-                  <div class="theme">博多祇園山笠～今心（ここ）に山笠魂を～</div>
+                  <div class="theme">中國志</div>
                   <div class="theme-genre">ダンステーマ</div>
                 </div>
-                <p>コロナによる2年間の中止を乗り越え今年の夏3年ぶりに復活した博多祇園山笠。この博多の伝統行事は、元々は疫病退散を願って始まった神事です。私たちは780年以上受け継がれてきた山笠を形作る大切なもの、山笠魂を表現します。疫病退散の想いを胸に、RED女子の熱く盛り上がるダンスで、今ここに、心に、山笠魂を燃やし4分半を駆け抜けます！！</p>
+                <p>中国激動の時代と呼ばれた春秋戦国時代の城郭都市の様子を表現する。春秋時代とは、周が滅亡した後、中国は分裂し、秦の始皇帝による全国統一までの約550年間をいう。あえて、具体的な戦乱を取り挙げず、古代中国を代表する城郭都市に焦点を当てることで、その時代の国を超えた民衆に共通し、現代の私たちにも通じる心の変化に着目した。</p>
               </div>
               <div class="themes">
                 <div class="theme-section">
-                  <div class="theme">煉火（れんか）</div>
+                  <div class="theme">一天四海</div>
                   <div class="theme-genre">タンブリングテーマ</div>
                 </div>
-                <p>「煉」には「精錬する」という意味があり、「火」は赤ブロックを示している。赤ブロックを精錬し、最高のタンブリングを作るという意味合いを込めて決定したテーマ「煉火」。コロナ禍という思い通りにならない環境で、私たちは変化し続け、伝統を繋いできた。このタンブリングでは、コロナ禍に立ち向かった３年間を表現する。</p>
+                <p>「一天四海」とは、この世全て、全世界の意である。我々は第一隊形「千巌万壑」、第二隊形「白砂青松」、第三隊形「夏雲奇峰」の全三隊形を通して、陸・海・空それぞれの自然の風景を表現する。この世界に広がる美しい風光を感じ取り、是非思いを馳せて頂きたい。我々黄ブロックの覇気の発揚をとくとご覧あれ。</p>
               </div>
               <div class="themes">
                 <div class="theme-section">
-                  <div class="theme">嚇醒（かくせい）</div>
+                  <div class="theme">謳歌</div>
                   <div class="theme-genre">応援コンテストテーマ</div>
                 </div>
-                <p>今年、３年振りに認められた応コンでの発声。応コン全力発声の熱気で大運動会を赤く染めるという意志を「嚇」という字に込めた。赤の勢いは止められない。応コンを通して新たな自分を、赤ブロックを目醒めさせる。</p>
+                <p>数年振りに解禁される声出し。観客の心を動かす応コンに不可欠な要素だ。文化の断絶は時にその文化の消滅を意味するが、そうはさせない 。この断絶をものともせず、むしろその反動で史上最高の応コンをブロック生全員で声を合わせて歌って―謳歌して―2023YELLOWが作り上げる 。</p>
               </div>
               <div class="themes">
                 <div class="theme-section">
-                  <div class="theme">暁</div>
+                  <div class="theme">嵐漫</div>
                   <div class="theme-genre">バックテーマ</div>
                 </div>
-                <p>長い夜が明け、朝日が昇る瞬間は誰もが待ち望んでいる。思うようにいかず苦しい時でも頑張れるのは、その先に光が差すことを信じていられるからだ。この夏を乗り越え、ずっと待ち望んでいた「暁」をRED全員で迎えたい。夜明けに広がる世界が、そこに映る私たちの姿が、何よりも美しいものでありますように。</p>
+                <p>花が咲き乱れる様、光り輝き明らかに現れる様を表す熟語｢爛漫｣。嵐という字を使うことで嵐を切り抜けて黄ブロックが1番輝き、圧倒できるようにと願いを込める。また、2つのテーマを合わせると桜花爛漫となる。満開の花が咲き乱れ、非常に明るく華やかな様子を共に表現する。</p>
               </div>
             </div>
-            <img src="img/back-yellow.jpg" alt="" class="back-img">
+            <img src="img/back-yellow.png" alt="" class="back-img">
             <div class="block-triangleBottom reverse"></div>
           </div>
         </div>
@@ -479,20 +502,20 @@
       <!--artwork-anchor--><div id="artwork-anchor"></div>
         <div class="artworks-outer">
           <div class="artworks">
-            <h1 class="titles">Atrworks</h1>
+            <h1 class="titles">Artworks</h1>
             <div class="art-container">
               <div class="art-container-top">
                 <div class="art-back-red">
-                  <a data-fancybox data-src="img/back-red.jpg" data-caption="REDバック"><img src="img/back-red.jpg" alt=""></a>
+                  <a data-fancybox data-src="img/back-red.png" data-caption="REDバック"><img src="img/back-red.png" alt=""></a>
                 </div>
                 <div class="art-back-white">
-                  <a data-fancybox data-src="img/back-white.jpg" data-caption="WHITEバック"><img src="img/back-white.jpg" alt=""></a>
+                  <a data-fancybox data-src="img/back-white.png" data-caption="WHITEバック"><img src="img/back-white.png" alt=""></a>
                 </div>
                 <div class="art-back-blue">
-                  <a data-fancybox data-src="img/back-blue.jpg" data-caption="BLUEバック"><img src="img/back-blue.jpg" alt=""></a>
+                  <a data-fancybox data-src="img/back-blue.png" data-caption="BLUEバック"><img src="img/back-blue.png" alt=""></a>
                 </div>
                 <div class="art-back-yellow">
-                  <a data-fancybox data-src="img/back-yellow.jpg" data-caption="YELLOWバック"><img src="img/back-yellow.jpg" alt=""></a>
+                  <a data-fancybox data-src="img/back-yellow.png" data-caption="YELLOWバック"><img src="img/back-yellow.png" alt=""></a>
                 </div>
               </div>
               <div class="art-container-bottom">
@@ -503,7 +526,7 @@
                   <a data-fancybox data-src="img/poster.jpg" data-caption="第76回修猷大運動会ポスター"><img src="img/poster.jpg" alt=""></a>
                 </div>
                 <div class="art-slogan">
-                  <a data-fancybox data-src="img/slogan.jpg" data-caption="スローガン「暁天」"><img src="img/slogan.png" alt=""></a>
+                  <a data-fancybox data-src="img/sloganUp.png" data-caption="スローガン「暁天」"><img src="img/slogan.png" alt=""></a>
                 </div>
               </div>
             </div>
@@ -529,8 +552,8 @@
           <li><a href="#top-anchor">Top</a></li>
           <li><a href="#about-anchor">About</a></li>
           <li><a href="#program-anchor">Program</a></li>
-          <li><a href="#block-anchor">Block</a></li>
-          <li><a href="#artwork-anchor">Artwork</a></li>
+          <li><a href="#block-anchor">Blocks</a></li>
+          <li><a href="#artwork-anchor">Artworks</a></li>
         </ul>
       </nav>
       <img src="img/sixStarWhite.gif" alt="SHUYU" class="footer-logo">
@@ -547,6 +570,83 @@
   <!--jquery--><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <!--luxy--><script src="luxy.min.js"></script>
              <script charset="UTF-8">luxy.init();</script>
+  <!--scrollReveal-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => { //setTimeoutによりローディング後に読み込むよう設定
+
+        ScrollReveal({
+          reset: false,
+          distance: "60px",
+          duration: 2000,
+          delay: 300
+        });
+
+        ScrollReveal().reveal(".titles", {
+          origin: "left",
+        });
+
+        ScrollReveal().reveal(".first-view-text-one, .first-view-text-two", {
+          origin: "bottom",
+          delay: 0
+        });
+
+        ScrollReveal().reveal(".poem", {
+          origin: "right",
+          distance: "20px",
+        });
+
+        ScrollReveal().reveal(".slogan-text p", {
+          origin: "left",
+          delay: 400
+        });
+
+        ScrollReveal().reveal(".slogan img", {
+          origin: "right",
+          distance: "20px"
+        });
+
+        ScrollReveal().reveal(".messages img", {
+          origin: "left",
+          delay: 0
+        });
+
+        ScrollReveal().reveal(".message-text", {
+          origin: "right",
+          distance: "20px"
+        });
+
+        ScrollReveal().reveal(".program-list, .block .block-text, .block button, .block img, .all-theme", {
+          origin: "bottom"
+        });
+
+        ScrollReveal().reveal(".block h2", {
+          origin: "left"
+        });
+
+        ScrollReveal().reveal(".themes .theme-section", {
+          origin: "left"
+        });
+
+        ScrollReveal().reveal(".themes p", {
+          origin: "left",
+          delay: 400
+        });
+
+        ScrollReveal().reveal(".location-map iframe", {
+          origin: "right",
+          distance: "20px"
+        });
+
+        ScrollReveal().reveal(".location-map button", {
+          origin: "top",
+          distance: "30px"
+        });
+        
+      }, 3000);
+    });
+  </script>  
   <script src="loading.js"></script>
   <script src="script.js"></script>
 
