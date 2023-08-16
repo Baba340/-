@@ -10,12 +10,11 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Noto Serif JP', serif;
   font-size: 16px;
   color: #000000;
   line-height: 1;
   background-color: #ffffff;
-  overflow-x: hidden;
 }
 
 img {
@@ -39,8 +38,8 @@ a {
   margin-bottom: 8px;
   padding-left: 8px;
   padding-bottom: 5px;
-  /* border-bottom: solid 1.5px black; */
   font-size: 32px;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 /* 一括指定CSS ここまで*/
 
@@ -81,6 +80,10 @@ a {
   padding-top: 18px;
 }
 
+.header nav a {
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
 .hamburger-menu-button {
   display: none;
 }
@@ -111,17 +114,37 @@ a {
   position: relative;
 }
 
-.first-view img {
+.first-view .images img {
   width: 100%;
-  height: calc(100vh - 90px);
+  height: calc(100vh + 90px);
   position: absolute;
   top: 0px;
   object-fit: cover;
   object-position: top left;
 }
 
-.first-view .blue-sky-img {
+.first-view .images .blue-sky-img {
   z-index: -2;
+}
+
+.first-view .images .plane-img {
+  z-index: -1;
+  width: auto;
+  height: 10vh;
+  top: 30vh;
+  right: 50vw;
+  opacity: 0.8;
+  object-position: top right;
+}
+
+.first-view .images .pine-img {
+  z-index: 1;
+  width: auto;
+  height: 30vh;
+  object-position: bottom right;
+  right: 0px;
+  top: auto;
+  bottom: 0px;
 }
 
 .first-view .school-img {
@@ -134,14 +157,31 @@ a {
   margin-left: auto;
   margin-right: auto;
   color: rgb(255, 255, 255);
-  font-weight: bold;
-  font-size: 40px;
+  /* font-weight: bold;
+  font-size: 40px; */
   text-shadow: 2px 2px 10px #000000;
   position: absolute;
   right: 0;
   left: 0;
-  top: 60vh;
+  top: 50vh;
   z-index: 1;
+  display: flex;
+}
+
+.first-view-text img {
+  display: block;
+}
+
+.first-view-text-one {
+  width: 30%;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.first-view-text-two {
+  width: 70%;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .first-view-text-br {
@@ -160,7 +200,7 @@ a {
 .poem-outer {
   background-color: #f1f1f1;
   position: relative;
-  z-index: -10;
+  z-index: 1;
 }
 
 .poem {
@@ -190,6 +230,16 @@ a {
 /* top-anchorここまで */
 
 /* about-anchorここから */
+#about-anchor {
+  position: relative;
+  z-index: 100;
+}
+
+.about-anchor-outer {
+  position: relative;
+  z-index: 2;
+}
+
 .slogan {
   display: flex;
   align-items: center;
@@ -208,7 +258,7 @@ a {
   width: 100%;
   height: 60vh;
   background: #c2c2c2;
-  z-index: -2;
+  z-index: -11;
 }
 
 .slogan::after {
@@ -222,7 +272,19 @@ a {
   width: 100%;
   height: 60vh;
   background: linear-gradient(90deg, #006EA6 0%, #ffffff 50%);
-  z-index: -1;
+  z-index: -10;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 0px;
+}
+::-webkit-scrollbar-track {
+  background: #e8e8e8;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #00a5fe, #0069a2);
+  border-radius: 10px;
 }
 
 .slogan-text-title {
@@ -357,8 +419,8 @@ a {
 
 /* program-anchorここから */
 [ data-horizonflow ] > * {
-  position: sticky;
-  top: 140px;
+  /* position: sticky;
+  top: 140px; */
   height: 520px;
   background-color: rgba(231, 231, 231, 0.5);
   border-top-right-radius: 50% 20%;
@@ -393,14 +455,15 @@ a {
   justify-content: start;
   align-items: center;
   padding: 0px 0px 0px 40px;
-  overflow: hidden;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .program-list li {
   flex-shrink: 0;
   margin-left: 30px;
   width: 320px;
-  height: 360px;
+  height: 300px;
   position: relative;
 }
 
@@ -484,10 +547,102 @@ a {
 
 .copyright-pict {
   font-size: 10px;
-  width: 5px !important;
+  width: 20px !important;
   margin-left: 10px !important;
+  padding-right: 15px !important;
   padding-top: 215px;
 }
+
+/* programのスクロールを促す矢印 */
+  .program-container {
+    position: relative;
+  }
+
+  .program-container .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(203, 203, 203, 0.94);
+    border-radius: 50%;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    padding-bottom: 60px;
+  }
+
+  .program-container .chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: arrowMove 3s ease-out infinite;
+  }
+
+  .program-container .chevron:first-child {
+    animation: arrowMove 3s ease-out 1s infinite;
+  }
+
+  .program-container .chevron:nth-child(2) {
+    animation: arrowMove 3s ease-out 2s infinite;
+  }
+
+  .program-container .chevron:before,
+  .program-container .chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #000000;
+  }
+
+  .program-container .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+  }
+
+  .program-container .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+  }
+
+  @keyframes arrowMove {
+    25% {
+      opacity: 1;
+
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+
+  .program-container .text {
+    display: block;
+    margin-top: 45px;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 12px;
+    color: #000;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 0px;
+    right: 50px;
+  }
 /* program-anchorここまで */
 
 /* block-anchorここから */
@@ -512,28 +667,30 @@ a {
 
 .block.red{
   margin-top: 200px;
+  padding-top: 50px;
 }
 
 .block.red{--block-color-: rgb(255, 76, 76);}
 .block.white{--block-color-: rgb(151, 151, 151);}
 .block.blue{--block-color-: rgb(16,114,156);}
-.block.yellow{--block-color-: rgb(214, 199, 91);}
+.block.yellow{--block-color-: #edb918;}
 
-.block.red h2{color: rgb(255, 76, 76);}
+.block.red h2{color: rgb(255, 76, 76); top: -110px !important;}
 .block.white h2{color: rgb(151,151,151);}
 .block.blue h2{color: rgb(16,114,156);}
-.block.yellow h2{color: rgb(214,199,91);}
+.block.yellow h2{color: #edb918;}
 
 .block h2 {
-  font-size: 100px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 160px;
   position: absolute;
-  top: -100px;
+  top: -160px;
   left: 0;
   right: 0;
   margin: auto;
   z-index: 1;
   text-align: center;
-  text-shadow: -10px -10px 20px #fff, 10px 10px 20px #fff, -10px 10px 20px #fff, 10px -10px 20px #fff;
+  text-shadow: -10px -10px 30px #fff, 10px 10px 30px #fff, -10px 10px 30px #fff, 10px -10px 30px #fff;
 }
 
 .block-inner {
@@ -641,13 +798,17 @@ a {
 .all-theme {
   width: 930px;
   max-width: 90%;
-  transition: max-height 1s,padding 0.1s, border 0.1s linear;
+  /* transition: max-height 1s,padding 0.1s, border 0.1s linear; */
   display: block;
-  margin: auto auto 30px auto;
-  max-height: 0;
-  padding: 0px;
+  /* margin: auto auto 30px auto; */
+  /* max-height: 0; */
+  /* padding: 0px; */
   color: #fff;
   overflow: hidden;
+
+  border: solid 30px #fff;
+  padding: 20px;
+  margin: 30px auto;
 }
 
 .themes {
@@ -864,6 +1025,11 @@ a {
       border-radius: 2em;
     }
 
+.droneshot {
+  width: 930px;
+  max-width: 90%;
+}
+
 .footer {
   color: #ffffff;
   background: linear-gradient(0deg, #00a5fe, #78d0ff);
@@ -874,6 +1040,10 @@ a {
   flex-direction: column;
   align-items: center;
   height: 350px;
+}
+
+.footer nav a {
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 .footer-logo {
