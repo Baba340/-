@@ -106,12 +106,22 @@
     height: calc(100vh - 50px);
   }
 
-  .first-view img {
-    height: calc(100vh - 50px);
+  .first-view .images img {
+    height: calc(100vh + 50px);
   }
 
   .first-view-text {
-    font-size: 25px;
+    /* font-size: 25px; */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first-view-text-one {
+    width: 50%;
+  }
+
+  .first-view-text-two {
+    width: 100%;
   }
 
   .first-view-text-br {
@@ -211,8 +221,16 @@
 
   /* block-anchorここから */
   .block h2 {
-    font-size: 60px; 
-    top: -90px;
+    font-size: 100px; 
+    top: -120px;
+  }
+
+  .block.red {
+    padding-top: 20px;
+  }
+
+  .block.red h2 {
+    top: -70px;
   }
 
   .block-inner {
@@ -247,6 +265,7 @@
 
   .block-slogan-title {
     font-size: 45px;
+    margin-bottom: 10px;
   }
 
   .block-slogan-title .rubi {
